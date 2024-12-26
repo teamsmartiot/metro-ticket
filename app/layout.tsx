@@ -10,9 +10,11 @@ import { Provider } from "@/provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "IOT HÒN ĐÂT - KIÊN GIANG",
+	title: "METRO TICKET",
 	description: "",
-	icons: ["https://i.ibb.co/yPd0Rmm/cc43759b3c44861adf55-removebg-preview.png"],
+	icons: [
+		"https://upload.wikimedia.org/wikipedia/commons/b/b9/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_S%C6%B0_Ph%E1%BA%A1m_K%E1%BB%B9_Thu%E1%BA%ADt_TP_H%E1%BB%93_Ch%C3%AD_Minh.png",
+	],
 };
 
 export default function RootLayout({
