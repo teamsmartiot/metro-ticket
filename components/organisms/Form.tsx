@@ -2,6 +2,7 @@
 import { addUser, loginUser } from "@/apis/user";
 import { useMutation } from "@tanstack/react-query";
 import { Button, Form, Input } from "antd";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -76,11 +77,13 @@ const FormRegister = ({ onRegisterSuccess }: FormRegisterProps) => {
 
 // Đăng nhập Component
 const FormLogin = () => {
+	const router = useRouter();
 	const { mutate: loginUserMutation, isPending: isLoggingIn } = useMutation({
 		mutationFn: (user: any) => loginUser(user),
 		mutationKey: ["login-user"],
 		onSuccess: () => {
 			toast.success("Đăng nhập thành công!");
+			router.push("/trains");
 		},
 		onError: (error: any) => {
 			toast.error("Đăng nhập không thành công, thử lại!");
